@@ -2,8 +2,8 @@ services:
   dr-neelima:
     build: .
     container_name: dr-neelima
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
     volumes:
       - ./appointments.db:/app/appointments.db
     environment:
