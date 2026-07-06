@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import HTMLResponse, FileResponse
+from fastapi.responses import HTMLResponse, FileResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 
 # Import database
@@ -14,6 +14,11 @@ app = FastAPI(title="Dr. Neelima Talari", description="Obstetrician & Gynecologi
 
 # Mount static files
 app.mount("/static", StaticFiles(directory="static"), name="static")
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    return RedirectResponse(url="/static/images/favicon.svg")
 
 # Import and include routers
 from routes.main import router as main_router
