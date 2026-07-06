@@ -126,7 +126,7 @@ dr-neelima/
 
 ## 🎨 Design
 
-- **Colors:** Teal (`#0d9488`), white, light blue, soft gradients
+- **Colors:** Rose/pink (`#f43f5e`), sky blue (`#0ea5e9`), soft gradients
 - **Fonts:** Playfair Display (headings), Inter (body)
 - **Cards:** Rounded corners, soft shadows, hover elevation
 - **Animations:** Fade-in on scroll, pulse on WhatsApp button, smooth transitions
