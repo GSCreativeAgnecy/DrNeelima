@@ -5,7 +5,7 @@ services:
     expose:
       - "8000"
     volumes:
-      - ./appointments.db:/app/appointments.db
+      - dr_neelima_data:/app/data
     environment:
       - APP_NAME=Dr. Neelima Talari
       - DEBUG=false
@@ -16,3 +16,6 @@ services:
       timeout: 10s
       retries: 3
       start_period: 15s
+
+volumes:
+  dr_neelima_data:
